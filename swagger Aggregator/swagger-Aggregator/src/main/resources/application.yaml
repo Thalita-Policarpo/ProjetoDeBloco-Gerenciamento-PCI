@@ -1,0 +1,40 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: swagger-aggregator
+  cloud:
+    gateway:
+      routes:
+        - id: swagger-extintor-service
+          uri: lb://extintor-service
+          predicates:
+            - Path=/extintor/**
+
+        - id: swagger-inspecaoextintor-service
+          uri: lb://inspecaoextintor-service
+          predicates:
+            - Path=/inspecao/**
+
+        - id: swagger-historicoextintor-service
+          uri: lb://historicoextintor-service
+          predicates:
+            - Path=/historico/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: extintor-service
+      paths-to-match: /extintor/**
+    - group: inspecaoextintor-service
+      paths-to-match: /inspecao/**
+    - group: historicoextintor-service
+      paths-to-match: /historico/**
