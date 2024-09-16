@@ -1,7 +1,7 @@
 # Gerenciamento de PCI
 
 ## Descrição do Projeto
-O **Bloco de Gerenciamento de PCI** é um sistema desenvolvido em Java utilizando a arquitetura de microsserviços para gerenciar Extintores, Inspeções e Históricos de alterações. O projeto é composto por três microsserviços principais que se comunicam entre si utilizando o Eureka Server e um Gateway para roteamento. Além disso, RabbitMQ é utilizado para troca de mensagens entre os microsserviços.
+O sistema **Gerenciamento de PCI** é um sistema desenvolvido em Java utilizando a arquitetura de microsserviços para gerenciar Extintores, Inspeções e Históricos de alterações. O projeto é composto por três microsserviços principais que se comunicam entre si utilizando o Eureka Server e um Gateway para roteamento. Além disso, RabbitMQ é utilizado para troca de mensagens entre os microsserviços.
 
 ## Microsserviços
 
